@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЭкоДомСтрой — строительство деревянных домов и бань</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo">
+                    <svg class="logo__icon" viewBox="0 0 40 40" fill="none">
+                        <rect width="40" height="40" rx="8" fill="#E67E22"/>
+                        <path d="M20 8L33 28H7L20 8Z" fill="#fff"/>
+                        <rect x="16" y="28" width="8" height="6" rx="1" fill="#fff"/>
+                    </svg>
+                    <span class="logo__text">Эко<span>ДомСтрой</span></span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="#projects" class="nav__link">Проекты</a></li>
+                        <li><a href="#calculator" class="nav__link">Калькулятор</a></li>
+                        <li><a href="#advantages" class="nav__link">Преимущества</a></li>
+                        <li><a href="#contact" class="nav__link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <a href="#contact" class="btn btn--header">Оставить заявку</a>
+                <button class="burger" aria-label="Меню" id="burgerBtn">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-menu__list">
+                <li><a href="#projects" class="mobile-menu__link">Проекты</a></li>
+                <li><a href="#calculator" class="mobile-menu__link">Калькулятор</a></li>
+                <li><a href="#advantages" class="mobile-menu__link">Преимущества</a></li>
+                <li><a href="#contact" class="mobile-menu__link">Контакты</a></li>
+            </ul>
+            <a href="#contact" class="btn btn--mobile">Оставить заявку</a>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__pattern"></div>
+        <div class="container">
+            <div class="hero__content">
+                <span class="hero__badge">🏆 15 лет на рынке</span>
+                <h1 class="hero__title">
+                    Построим дом<br>вашей мечты<br>
+                    <span class="hero__title-accent">за 45 дней</span>
+                </h1>
+                <p class="hero__subtitle">
+                    Бревенчатые дома, дома из бруса, бани и хозпостройки —<br>
+                    проектируем и строим «под ключ» с гарантией 10 лет
+                </p>
+                <div class="hero__stats">
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">350+</span>
+                        <span class="hero__stat-label">построенных объектов</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">12</span>
+                        <span class="hero__stat-label">лет гарантии</span>
+                    </div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">100%</span>
+                        <span class="hero__stat-label">сдача в срок</span>
+                    </div>
+                </div>
+                <div class="hero__actions">
+                    <a href="#calculator" class="btn btn--primary">Рассчитать стоимость</a>
+                    <a href="#projects" class="btn btn--outline">Смотреть проекты</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span>Листайте вниз</span>
+            <svg width="20" height="30" viewBox="0 0 20 30"><rect x="7" y="2" width="6" height="16" rx="3" fill="none" stroke="#fff" stroke-width="2"/><circle cx="10" cy="10" r="2" fill="#fff" class="scroll-dot"/></svg>
+        </div>
+    </section>
+
+    <!-- Проект -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Наши работы</span>
+                <h2 class="section-title">Примеры готовых домов</h2>
+                <p class="section-subtitle">Более 350 реализованных проектов в Костромской области и за её пределами</p>
+            </div>
+
+            <!-- Фильтр -->
+            <div class="filters" id="filters">
+                <div class="filters__row">
+                    <div class="filter-group">
+                        <label class="filter-label">Материал</label>
+                        <div class="filter-buttons" data-filter="material">
+                            <button class="filter-btn active" data-value="all">Все</button>
+                            <button class="filter-btn" data-value="brevno">Бревно</button>
+                            <button class="filter-btn" data-value="brus">Брус</button>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Тип фундамента</label>
+                        <div class="filter-buttons" data-filter="foundation">
+                            <button class="filter-btn active" data-value="all">Все</button>
+                            <button class="filter-btn" data-value="lentochniy">Ленточный</button>
+                            <button class="filter-btn" data-value="svayniy">Свайный</button>
+                            <button class="filter-btn" data-value="plitniy">Плитный</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="filters__row">
+                    <div class="filter-group">
+                        <label class="filter-label">Площадь дома</label>
+                        <div class="filter-buttons" data-filter="area">
+                            <button class="filter-btn active" data-value="all">Любая</button>
+                            <button class="filter-btn" data-value="small">до 80 м²</button>
+                            <button class="filter-btn" data-value="medium">80–150 м²</button>
+                            <button class="filter-btn" data-value="large">от 150 м²</button>
+                        </div>
+                    </div>
+                    <div class="filter-group">
+                        <label class="filter-label">Этажность</label>
+                        <div class="filter-buttons" data-filter="floors">
+                            <button class="filter-btn active" data-value="all">Все</button>
+                            <button class="filter-btn" data-value="1">1 этаж</button>
+                            <button class="filter-btn" data-value="2">2 этажа</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn--reset" id="resetFilters">Сбросить фильтры</button>
+            </div>
+
+            <!-- Карточки проектов -->
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Генерация карточек в JS -->
+            </div>
+            <div class="projects-empty" id="projectsEmpty" style="display:none;">
+                <svg width="80" height="80" viewBox="0 0 80 80" fill="none"><circle cx="40" cy="40" r="36" stroke="#ccc" stroke-width="3" fill="none"/><path d="M28 40h24M40 28v24" stroke="#ccc" stroke-width="3" stroke-linecap="round"/></svg>
+                <p>По заданным фильтрам проектов не найдено</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Калькулятор -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag section-tag--light">Калькулятор</span>
+                <h2 class="section-title section-title--light">Рассчитайте стоимость строительства</h2>
+                <p class="section-subtitle section-subtitle--light">Ответьте на несколько вопросов и получите примерную смету за 1 минуту</p>
+            </div>
+            <div class="calculator__wrapper">
+                <div class="calculator__form">
+                    <div class="calc-step">
+                        <label class="calc-label">Тип строения</label>
+                        <div class="calc-options" id="calcType">
+                            <button class="calc-option" data-type="brevno" data-price="38000">Бревенчатый дом</button>
+                            <button class="calc-option" data-type="brus" data-price="32000">Дом из бруса</button>
+                            <button class="calc-option" data-type="banya" data-price="24000">Баня</button>
+                            <button class="calc-option" data-type="hoz" data-price="18000">Хозпостройка</button>
+                        </div>
+                    </div>
+                    <div class="calc-row">
+                        <div class="calc-step calc-step--half">
+                            <label class="calc-label">Площадь (м²)</label>
+                            <div class="calc-range">
+                                <input type="range" id="calcArea" min="20" max="300" value="100" step="5">
+                                <div class="calc-range-labels">
+                                    <span>20 м²</span>
+                                    <span class="calc-range-value" id="calcAreaValue">100 м²</span>
+                                    <span>300 м²</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc-step calc-step--half">
+                            <label class="calc-label">Количество этажей</label>
+                            <div class="calc-options" id="calcFloors">
+                                <button class="calc-option active" data-floors="1" data-coef="1">1 этаж</button>
+                                <button class="calc-option" data-floors="2" data-coef="1.4">2 этажа</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc-step">
+                        <label class="calc-label">Тип фундамента</label>
+                        <div class="calc-options" id="calcFoundation">
+                            <button class="calc-option active" data-foundation="lentochniy" data-coef="1">Ленточный</button>
+                            <button class="calc-option" data-foundation="svayniy" data-coef="0.85">Свайный</button>
+                            <button class="calc-option" data-foundation="plitniy" data-coef="1.25">Плитный</button>
+                        </div>
+                    </div>
+                    <div class="calculator__result">
+                        <div class="calc-result-card">
+                            <span class="calc-result-label">Примерная стоимость</span>
+                            <span class="calc-result-price" id="calcResult">2 600 000 ₽</span>
+                            <span class="calc-result-note">*точная стоимость после выезда инженера на участок</span>
+                        </div>
+                        <a href="#contact" class="btn btn--primary btn--calc">Получить точную смету</a>
+                    </div>
+                </div>
+                <div class="calculator__image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='400' viewBox='0 0 500 400'%3E%3Crect fill='%23f0e6d8' width='500' height='400' rx='16'/%3E%3Cpolygon fill='%238B5E3C' points='250,80 400,280 100,280'/%3E%3Crect fill='%23A0522D' x='140' y='280' width='220' height='100' rx='2'/%3E%3Crect fill='%236B3A2A' x='200' y='310' width='60' height='70' rx='3'/%3E%3Crect fill='%2387CEEB' x='160' y='290' width='30' height='25' rx='2'/%3E%3Crect fill='%2387CEEB' x='310' y='290' width='30' height='25' rx='2'/%3E%3C/svg%3E" alt="Дом" class="calc-image-img">
+                    <div class="calc-image-badge">
+                        <span>Рассчёт за 1 минуту</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section class="advantages" id="advantages">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Почему мы</span>
+                <h2 class="section-title">Почему стоит выбрать именно нас</h2>
+                <p class="section-subtitle">ЭкоДомСтрой — это сочетание опыта, качества и честного подхода к каждому клиенту</p>
+            </div>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="#FFF3E6" stroke="#E67E22" stroke-width="2"/><path d="M18 30l8 8 16-16" stroke="#E67E22" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </div>
+                    <h3 class="advantage-title">Гарантия 12 лет</h3>
+                    <p class="advantage-text">Даём расширенную гарантию на все виды работ. Уверены в качестве каждого построенного объекта.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="#FFF3E6" stroke="#E67E22" stroke-width="2"/><rect x="20" y="16" width="20" height="20" rx="3" stroke="#E67E22" stroke-width="2.5" fill="none"/><path d="M20 24h20" stroke="#E67E22" stroke-width="2.5"/><rect x="25" y="28" width="10" height="8" rx="1" fill="#E67E22"/></svg>
+                    </div>
+                    <h3 class="advantage-title">Собственное производство</h3>
+                    <p class="advantage-text">Имеем цех по обработке древесины — контролируем качество материала на всех этапах.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="#FFF3E6" stroke="#E67E22" stroke-width="2"/><circle cx="30" cy="22" r="6" stroke="#E67E22" stroke-width="2.5" fill="none"/><path d="M18 46c0-8 5.4-12 12-12s12 4 12 12" stroke="#E67E22" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3 class="advantage-title">Штатные бригады</h3>
+                    <p class="advantage-text">Все строители в штате компании — никаких субподрядчиков и случайных людей на объекте.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="#FFF3E6" stroke="#E67E22" stroke-width="2"/><path d="M15 38l7-18 7 18M20 34h14" stroke="#E67E22" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 20v18M38 20l6 6M38 20l-6 6" stroke="#E67E22" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3 class="advantage-title">Поэтапная оплата</h3>
+                    <p class="advantage-text">Платите за фактически выполненные работы. Прозрачная смета без скрытых платежей.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="#FFF3E6" stroke="#E67E22" stroke-width="2"/><rect x="14" y="22" width="32" height="22" rx="3" stroke="#E67E22" stroke-width="2.5" fill="none"/><path d="M18 28h24M18 34h16" stroke="#E67E22" stroke-width="2" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3 class="advantage-title">Проектирование бесплатно</h3>
+                    <p class="advantage-text">При заказе строительства — индивидуальный проект в подарок. Экономия до 80 000 ₽.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-icon">
+                        <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" fill="#FFF3E6" stroke="#E67E22" stroke-width="2"/><circle cx="30" cy="30" r="10" stroke="#E67E22" stroke-width="2.5" fill="none"/><path d="M30 18v4M30 38v4M18 30h4M38 30h4" stroke="#E67E22" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </div>
+                    <h3 class="advantage-title">Строим в любом регионе</h3>
+                    <p class="advantage-text">Работаем по всей России. Организуем логистику материалов и бригады в любую точку.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакт обратной связи -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact__wrapper">
+                <div class="contact__info">
+                    <span class="section-tag">Связаться с нами</span>
+                    <h2 class="section-title">Оставьте заявку<br>на бесплатную консультацию</h2>
+                    <p class="contact__text">
+                        Наш инженер свяжется с вами в течение 30 минут, ответит на все вопросы и поможет подобрать оптимальный проект под ваш бюджет.
+                    </p>
+                    <div class="contact__details">
+                        <div class="contact-detail">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><circle cx="12" cy="12" r="10" stroke="#E67E22" stroke-width="2"/><path d="M8 12l3 3 5-5" stroke="#E67E22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>Бесплатный выезд инженера на участок</span>
+                        </div>
+                        <div class="contact-detail">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><circle cx="12" cy="12" r="10" stroke="#E67E22" stroke-width="2"/><path d="M8 12l3 3 5-5" stroke="#E67E22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>3 варианта сметы под разный бюджет</span>
+                        </div>
+                        <div class="contact-detail">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><circle cx="12" cy="12" r="10" stroke="#E67E22" stroke-width="2"/><path d="M8 12l3 3 5-5" stroke="#E67E22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <span>Каталог готовых проектов в подарок</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact__form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Ваше имя" required id="formName">
+                        <span class="form-icon">👤</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-input" placeholder="+7 (___) ___-__-__" required id="formPhone">
+                        <span class="form-icon">📱</span>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-input form-select" id="formService">
+                            <option value="">Выберите услугу</option>
+                            <option value="brevno">Бревенчатый дом</option>
+                            <option value="brus">Дом из бруса</option>
+                            <option value="banya">Баня</option>
+                            <option value="hoz">Хозпостройка</option>
+                            <option value="other">Другое / консультация</option>
+                        </select>
+                        <span class="form-icon">🏠</span>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input form-textarea" placeholder="Опишите ваши пожелания (необязательно)" id="formMessage" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--form">Отправить заявку</button>
+                    <p class="form-agreement">Нажимая кнопку, вы соглашаетесь с <a href="#">политикой обработки данных</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подтверждение отправки формы -->
+    <div class="modal" id="successModal">
+        <div class="modal__content">
+            <div class="modal__check">✓</div>
+            <h3 class="modal__title">Заявка отправлена!</h3>
+            <p class="modal__text">Наш специалист свяжется с вами в ближайшее время.</p>
+            <button class="btn btn--primary" id="closeModal">Хорошо</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__col">
+                    <a href="#" class="logo logo--footer">
+                        <svg class="logo__icon" viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="8" fill="#E67E22"/>
+                            <path d="M20 8L33 28H7L20 8Z" fill="#fff"/>
+                            <rect x="16" y="28" width="8" height="6" rx="1" fill="#fff"/>
+                        </svg>
+                        <span class="logo__text">Эко<span>ДомСтрой</span></span>
+                    </a>
+                    <p class="footer__desc">Строительство деревянных домов, бань и хозпостроек с гарантией 12 лет.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Услуги</h4>
+                    <ul class="footer__list">
+                        <li><a href="#">Бревенчатые дома</a></li>
+                        <li><a href="#">Дома из бруса</a></li>
+                        <li><a href="#">Бани</a></li>
+                        <li><a href="#">Хозпостройки</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Контакты</h4>
+                    <ul class="footer__list footer__list--contacts">
+                        <li>📞 +7 (123) 456-78-90</li>
+                        <li>✉️ info@RdikPradik.ru</li>
+                        <li>📍 г. Кострома, ул. Крутая, дом Кирпичный</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 ЭкоДомСтрой. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
